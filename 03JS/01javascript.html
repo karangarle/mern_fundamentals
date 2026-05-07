@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .btn-click{
+            background-color: purple;
+            padding: 10px;
+            margin: 10px;
+            color: white;
+        }
+        .btn-click:hover{
+            background-color: rgb(84, 10, 84);
+        }
+    </style>
+</head>
+<body>
+    <h1>javaScript variable</h1>
+    <button class="btn-click" onclick="showInfo()">Click me!</button>
+
+    <script>
+        function showInfo(){
+            let name = "Karan";
+            let age = 25;
+            let city = "Pune"
+
+            alert("Name: " + name + "\nAge: " + age + "\ncity: " + city)
+        }
+    </script>
+</body>
+</html>

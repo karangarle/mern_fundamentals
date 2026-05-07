@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS conditions</title>
+    <style>
+      * {
+        padding: 0%;
+        margin: 0%;
+      }
+      .btn-click {
+        background-color: purple;
+        padding: 10px;
+        margin: 10px;
+        color: white;
+      }
+      .btn-click:hover {
+        background-color: rgb(104, 1, 104);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Conditions</h1>
+
+    <p>Enter your marks:</p>
+    <input type="number" id="marks" placeholder="Enter marks" />
+    <button class="btn-click" onclick="checkResult()">Check Result</button>
+
+    <script>
+      function checkResult() {
+        let marks = document.getElementById("marks").value;
+        marks = Number(marks);
+        alert("Marks===========>" + marks)
+        if (marks >= 90) {
+          alert("Distinction! Excellent!");
+        } else if (marks >= 60) {
+          alert("First Class! Well done!");
+        } else if (marks >= 40) {
+          alert("Pass! Keep studying!");
+        } else {
+          alert("Fail! Please study harder!");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatypes</title>
+    <style>
+        .btn-click{
+            background-color: purple;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data types</h1>
+    <button class="btn-click" onclick="showInfo()">showInfo</button>
+
+    <script>
+        function showInfo() {
+            let name = "Karan";
+            let age = 24;
+            let isStudent = false;
+            let hobbies = ["cricket","movies","coding"];
+
+            let person = {
+                name : "Karan",
+                city : "ahmedabad",
+            }
+
+            alert("Name : " + name + "\nAge : " + age + "\nStudent : " + isStudent + "\nHobbies : " + hobbies + "\nCity : " + person.city)
+        }
+    </script>
+</body>
+</html>

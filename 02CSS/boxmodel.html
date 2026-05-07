@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boxmodel</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .my-box1{
+            background-color: purple;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            border: 3px solid black;
+            width: 300px;
+        }
+
+        .my-box1:hover{
+            background-color: rgb(83, 10, 83);
+        }
+
+        .my-box2{
+            background-color: blueviolet;
+            color: white;
+            padding: 20px;
+            margin: 20px;
+            border: 3px solid black;
+            width: 300px;
+        }
+
+        .my-box2:hover{
+            background-color: rgb(91, 28, 151);
+        }
+    </style>
+</head>
+<body>
+    <h1>box model exmaple</h1>
+
+    <div class="my-box1">
+        I am box 1, I have small padding and margin.
+    </div>
+
+    <div class="my-box2">
+        I am box 2, I have big padding and margin
+    </div>
+</body>
+</html>
