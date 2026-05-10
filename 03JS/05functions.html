@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      #btn-click {
+        background-color: greenyellow;
+        color: black;
+        padding: 5px;
+        border-radius: 10px;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+      }
+
+      .data {
+        border: 2px solid white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .data input {
+        border-radius: 5px;
+        padding: 5px;
+      }
+
+      .main-container {
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body class="main-container">
+    <h1>JavaScript Function</h1>
+    <div class="data">
+      <div>
+        <input
+          type="text"
+          name="userName"
+          id="userName"
+          placeholder="Please enter your name"
+        />
+        <input
+          type="number"
+          name="age"
+          id="age"
+          placeholder="Plese enter your age"
+        />
+      </div>
+      <button onclick="showGreeting()" id="btn-click">Show greeting</button>
+      <p id="output"></p>
+    </div>
+    <script>
+      // Arrow function - same thing!
+      const createGreeting = (name, age) => {
+        let message =
+          "Hello " + name + "! " + "You are  " + age + " years old!";
+        return message;
+      };
+
+      // Short arrow function
+      const checkAgeStatus = (age) =>
+        age <= 18 ? "You are minor" : "You are adult";
+
+      // Normal function
+      function showGreeting() {
+        let name = document.getElementById("userName").value;
+        let age = document.getElementById("age").value;
+        age = Number(age);
+
+        let greeting = createGreeting(name, age);
+        let ageStatus = checkAgeStatus(age);
+
+        document.getElementById("output").innerText =
+          greeting + " " + ageStatus;
+
+        setTimeout(() => {
+          document.getElementById("output").innerText = " ";
+        }, 5000);
+      }
+    </script>
+  </body>
+</html>
