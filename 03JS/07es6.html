@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      #btn-click {
+        background-color: greenyellow;
+        color: black;
+        padding: 5px;
+        border-radius: 10px;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+      }
+
+      .data {
+        border: 2px solid white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .data input {
+        border-radius: 5px;
+        padding: 5px;
+      }
+
+      .main-container {
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      #output{
+        padding: 10px;
+      }
+    </style>
+</head>
+<body class="main-container">
+    <h1>ES6 Template Literals</h1>
+
+    <div class="data">
+        <input type="text" name="userName" id="userName" placeholder="Enter Your name">
+        <input type="number" name="salary" id="salary" placeholder="Enter your salary">
+        <button onclick="showMessage()" id="btn-click">Check Tax</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function showMessage(){
+            let name = document.getElementById("userName").value;
+            let salary = Number(document.getElementById("salary").value);
+
+            
+            let oldWay = "Hello " + name + "! Your salary is " + salary + "rupees!";
+            let newWay = `Hello ${name}! Your salary is ${salary} rupees!`;
+            let withTax = `Hello ${name}! After Tax Your salary is ${salary - 500}`;
+            
+            document.getElementById("output").innerHTML = `
+          <p>Old Way: ${oldWay}</p>
+          <p>New Way: ${newWay}</p>
+          <p>With Tax: ${withTax}</p>
+        `;
+        }
+    </script>
+</body>
+</html>
