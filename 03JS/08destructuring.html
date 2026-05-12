@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>ES6 Destructuring</h1>
+    <button onclick="showData()">Show Data</button>
+    <p id="output"></p>
+
+    <script>
+
+      function showData() {
+
+        // Object destructuring
+        let student = {
+          name: "Raj",
+          age: 22,
+          city: "Ahmedabad",
+          course: "MERN Stack"
+        };
+
+        let { name, age, city, course } = student;
+
+        // Array destructuring
+        let topStudents = ["Raj", "Priya", "Amit"];
+        let [first, second, third] = topStudents;
+
+        document.getElementById("output").innerHTML = `
+          <h2>Student Details:</h2>
+          <p>Name: ${name}</p>
+          <p>Age: ${age}</p>
+          <p>City: ${city}</p>
+          <p>Course: ${course}</p>
+
+          <h2>Top Students:</h2>
+          <p>1st: ${first}</p>
+          <p>2nd: ${second}</p>
+          <p>3rd: ${third}</p>
+        `;
+      }
+
+    </script>
+
+  </body>
+</html>
