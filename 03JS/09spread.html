@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <h1>ES6 Spread Operator</h1>
+    <button onclick="showData()">Show data</button>
+    <p id="output"></p>
+
+    <script>
+        let indianFruits = ["Mango","Banana","Guava"];
+        let forighnFruits = ["Apple","Grapes","Kiwi"];
+
+        let allFruits = [...indianFruits , ...forighnFruits];
+
+        let basicInfo = {
+            name : "Karan",
+            age : 24
+        }
+
+        let jobInfo = {
+            company : "Tech",
+            salary : 50000
+        }
+
+        let profileInfo = {...basicInfo,...jobInfo};
+
+        document.getElementById("output").innerHTML =   `
+        <h2>indian Fruits</h2>
+        <p>${indianFruits}</p>
+
+        <h2>Foreign Fruits:</h2>
+        <p>${forighnFruits}</p>
+
+        <h2>All Fruits</h2>
+        <p>${allFruits}</p>
+
+        <h2>Full Profile:</h2>
+        <p>Name : ${profileInfo.name}</p>
+        <p>Age : ${profileInfo.age}</p>
+        <p>Comoany : ${profileInfo.company}</p>
+        <p>Salary : ${profileInfo.salary}</p>
+
+        `;
+    </script>
+</body>
+</html>
