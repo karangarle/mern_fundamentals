@@ -8,6 +8,11 @@
 
     <script>
 
+      // In React - destructuring props
+      function StudentCard({ name, age, city }) {
+        return `${name} is ${age} years old from ${city}`;
+      }
+
       function showData() {
 
         // Object destructuring
