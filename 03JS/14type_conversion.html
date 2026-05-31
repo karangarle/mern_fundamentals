@@ -1,0 +1,33 @@
+<!DOCTYPE html >
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Js Type Conversion</title>
+  </head>
+  <body>
+    <script>
+      let a  = 12; /* number to string*/
+      document.write('Now type of a : '+ typeof String(a));
+      let b  = true; /* boolean to string*/
+      document.write('<br>Now type of b : '+ typeof String(b));
+      let c  = null; /* null to string*/
+      document.write('<br>Now type of c : '+ typeof String(c));
+
+      let d = '12'; /*single quoted string to number*/
+      document.write('Now type of d : '+ typeof Number(d));
+      let e  = "10"; /*double quoted string to number*/
+      document.write('<br>Now type of e : '+ typeof Number(e));
+      let f  = null; /*null to Number*/
+      document.write('<br>Now type of f : '+ typeof Number(f));
+
+      document.write('type of "true" : '+ Boolean("True"));
+      document.write('<br>string converts into true : '+Boolean('mystring'));
+      document.write('<br>string that contain 0 converts into true : '+Boolean('0'));
+      document.write('<br>empty string converts into false: '+Boolean(''));
+      document.write('<br>null converts into false : '+Boolean(null));
+      document.write('<br>numeric value 0 converts into false : '+Boolean(0));
+      let x;
+      document.write('<br>undefined variable converts into false : '+Boolean(x));
+    </script>
+  </body>
+</html>

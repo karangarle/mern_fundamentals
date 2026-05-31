@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datatypes</title>
+    <title>Js Data Type</title>
     <style>
-        .btn-click{
+        .btn-click {
             background-color: purple;
             color: white;
             padding: 10px;
@@ -13,6 +14,7 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Data types</h1>
     <button class="btn-click" onclick="showInfo()">showInfo</button>
@@ -22,15 +24,61 @@
             let name = "Karan";
             let age = 24;
             let isStudent = false;
-            let hobbies = ["cricket","movies","coding"];
+            let hobbies = ["cricket", "movies", "coding"];
 
             let person = {
-                name : "Karan",
-                city : "ahmedabad",
+                name: "Karan",
+                city: "ahmedabad",
             }
 
             alert("Name : " + name + "\nAge : " + age + "\nStudent : " + isStudent + "\nHobbies : " + hobbies + "\nCity : " + person.city)
         }
+
+document.write('Js Data Type : Numbers');
+        let a = 10;
+        let b = 10.78;
+        document.write('<br/>data of a : ' + a + ' and data of b : ' + b);
+        document.write('<br/>type of a : ' + typeof a + ' and type of b : ' + typeof b);
+
+        document.write('Js Data Type : BigInt');
+        let c = 10n;
+        document.write('<br/>data of c : ' + c);
+        document.write('<br/>type of c : ' + typeof c);
+
+
+document.write('Js Data Type : String');
+        let d = 'string';
+        let e = "string";
+        let f = `string`;
+        document.write('type of d : ' + typeof d);
+        document.write('<br>type of e : ' + typeof e);
+        document.write('<br>type of f : ' + typeof f);
+        /*now try with new keyword */
+        let g = new String("MyString");
+        document.write('<br>type of g : ' + typeof g);
+
+        document.write('Js Data Type : Boolean');
+        let h = true;
+        let i = false;
+        document.write('type of h : ' + typeof h);
+        document.write('<br>type of i : ' + typeof i);
+        document.write('<br>Expression : ' + typeof (5 > 9));
+
+        document.write('Js Data Type : null');
+        let j = null;
+        document.write('<br>type of j : ' + typeof j);
+        document.write('Js Data Type : undefined');
+        let k; //undefined
+        document.write('<br>type of k : ' + typeof k);
+
+        document.write('Js Data Type : Object');
+        let person = {
+            name: "Karan",
+            city: "ahmedabad",
+        }       
+        document.write('<br>type of person : ' + typeof Math);
+        document.write('<br>type of person : ' + typeof person);
     </script>
 </body>
+
 </html>
