@@ -5,52 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ES6 Template Literals</title>
 
-    <style>
-      * {
-        margin: 0px;
-        padding: 0px;
-      }
-      body {
-        background-color: black;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      #btn-click {
-        background-color: greenyellow;
-        color: black;
-        padding: 5px;
-        border-radius: 10px;
-        align-items: center;
-        text-align: center;
-        margin: 10px;
-      }
-
-      .data {
-        border: 2px solid white;
-        padding: 20px;
-        border-radius: 10px;
-      }
-      .data input {
-        border-radius: 5px;
-        padding: 5px;
-      }
-
-      .main-container {
-        text-align: center;
-      }
-
-      h1 {
-        margin-bottom: 20px;
-      }
-
-      #output {
-        padding: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script src="navigation.js" defer></script>
   </head>
   <body class="main-container">
     <h1>ES6 Template Literals</h1>
@@ -72,7 +28,8 @@
         id="salary"
         placeholder="Enter your salary"
       />
-      <button onclick="showMessage()" id="btn-click">Check Tax</button>
+      <button onclick="showMessage()" id="btn-click">Check Tax</button
+      ><br /><br />
       <p id="output"></p>
     </div>
 

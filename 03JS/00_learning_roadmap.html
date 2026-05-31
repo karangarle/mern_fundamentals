@@ -5,95 +5,626 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Learning Roadmap</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
       body {
-        font-family: Arial, sans-serif;
+        font-family:
+          Inter,
+          Segoe UI,
+          Arial,
+          sans-serif;
         line-height: 1.5;
-        margin: 24px;
-        background: #f7f7f7;
-        color: #222;
+        margin: 0;
+        background: #0f172a;
+        color: #e5e7eb;
+      }
+
+      .page {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 28px 18px 44px;
+      }
+
+      .hero {
+        border: 1px solid #334155;
+        border-radius: 8px;
+        background: #111827;
+        padding: 22px;
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        color: #f8fafc;
+        font-size: 32px;
+        line-height: 1.2;
+        margin: 0 0 10px;
+      }
+
+      h2 {
+        color: #f8fafc;
+        font-size: 20px;
+        margin: 0 0 12px;
+      }
+
+      p {
+        margin-top: 0;
+      }
+
+      .subtitle {
+        color: #cbd5e1;
+        max-width: 780px;
+        margin-bottom: 16px;
+      }
+
+      .study-rule {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 16px;
+      }
+
+      .rule {
+        border: 1px solid #334155;
+        border-radius: 8px;
+        background: #0b1220;
+        padding: 12px;
+      }
+
+      .rule b {
+        color: #38bdf8;
+        display: block;
+        margin-bottom: 4px;
       }
 
       .section {
-        background: white;
-        border: 1px solid #ddd;
+        background: #111827;
+        border: 1px solid #334155;
         border-radius: 8px;
-        margin: 14px 0;
-        padding: 16px;
+        margin: 16px 0;
+        padding: 18px;
+      }
+
+      .topic {
+        border-top: 1px solid #263244;
+        display: block;
+        padding: 14px 0;
+      }
+
+      .topic:first-of-type {
+        border-top: 0;
       }
 
       a {
-        color: #0645ad;
+        color: #67e8f9;
         display: inline-block;
-        margin: 4px 12px 4px 0;
+        font-weight: bold;
+        margin-bottom: 6px;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #a5f3fc;
+        text-decoration: underline;
+      }
+
+      .desc {
+        margin: 4px 0;
+        color: #d1d5db;
+      }
+
+      .interview {
+        color: #fbbf24;
+        margin: 0;
+      }
+
+      .teach {
+        color: #86efac;
+        margin: 0;
+      }
+
+      .badge {
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 999px;
+        color: #cbd5e1;
+        display: inline-block;
+        font-size: 12px;
+        margin-bottom: 8px;
+        padding: 4px 10px;
+      }
+
+      @media (max-width: 780px) {
+        .study-rule {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
+    <link rel="stylesheet" href="style.css" />
+    <script src="navigation.js" defer></script>
   </head>
 
   <body>
-    <h1>JavaScript Learning + Interview Roadmap</h1>
-    <p>
-      Is page ko revision checklist ki tarah use karo. Pehle fundamentals, phir
-      DOM, phir interview topics.
-    </p>
+    <main class="page">
+      <section class="hero">
+        <span class="badge">Dark Mode Study Dashboard</span>
+        <h1>JavaScript Learning + Interview Roadmap</h1>
+        <p class="subtitle">
+          Is page ko teacher mode me use karo: pehle concept samjho, phir code
+          run karo, phir kisi beginner ko 2 minute me explain karne ki practice
+          karo.
+        </p>
 
-    <div class="section">
-      <h2>1. Basics</h2>
-      <a href="01javascript.html">Variables</a>
-      <a href="02datatypes.html">Data Types</a>
-      <a href="03type_conversion.html">Type Conversion</a>
-    </div>
+        <div class="study-rule">
+          <div class="rule">
+            <b>1. Read</b>
+            Topic ka simple meaning samjho.
+          </div>
+          <div class="rule">
+            <b>2. Run</b>
+            Linked file open karke output dekho.
+          </div>
+          <div class="rule">
+            <b>3. Change</b>
+            Example me values change karke test karo.
+          </div>
+          <div class="rule">
+            <b>4. Teach</b>
+            Same topic kisi ko apni language me samjhao.
+          </div>
+        </div>
+      </section>
 
-    <div class="section">
-      <h2>2. Operators + Conditions</h2>
-      <a href="04arithmetic_operators.html">Arithmetic</a>
-      <a href="05assignment_operators.html">Assignment</a>
-      <a href="06increment_decrement.html">Increment</a>
-      <a href="07comparison_operators.html">Comparison</a>
-      <a href="08logical_operators.html">Logical</a>
-      <a href="09ternary_operator.html">Ternary</a>
-      <a href="10conditions.html">Conditions</a>
-      <a href="11switch.html">Switch</a>
-    </div>
+      <div class="section">
+        <h2>1. Basics</h2>
+        <div class="topic">
+          <a href="01javascript.html">01. Variables</a>
+          <div>
+            <p class="desc">
+              Data ko store karna sikho using let, const, variable name aur
+              value.
+            </p>
+            <p class="teach">
+              Teach: Variable ko ek labelled box ki tarah explain karo.
+            </p>
+            <p class="interview">
+              Interview: let, const, var difference and naming rules.
+            </p>
+          </div>
+        </div>
+        <div class="topic">
+          <a href="02datatypes.html">02. Data Types</a>
+          <div>
+            <p class="desc">
+              Primitive aur reference data samjho: number, string, boolean,
+              null, undefined, bigint, object, array.
+            </p>
+            <p class="teach">Teach: Har data type ka real-life example do.</p>
+            <p class="interview">
+              Interview: typeof null, primitive vs reference, array typeof
+              object.
+            </p>
+          </div>
+        </div>
+        <div class="topic">
+          <a href="03type_conversion.html">03. Type Conversion</a>
+          <div>
+            <p class="desc">
+              String, Number, Boolean conversion aur truthy/falsy values samjho.
+            </p>
+            <p class="teach">
+              Teach: User input string hota hai, calculation ke liye number
+              banana padta hai.
+            </p>
+            <p class="interview">
+              Interview: "5" + 2 vs "5" - 2, Boolean("") and Boolean("0").
+            </p>
+          </div>
+        </div>
+      </div>
 
-    <div class="section">
-      <h2>3. Loops + Functions</h2>
-      <a href="12loops.html">Loops</a>
-      <a href="13whileLoop.html">While</a>
-      <a href="14doWhileLoop.html">Do While</a>
-      <a href="15forLoop.html">For</a>
-      <a href="16forInLoop.html">For In</a>
-      <a href="17forOfLoop.html">For Of</a>
-      <a href="18functions.html">Functions</a>
-      <a href="19scope.html">Scope</a>
-      <a href="20callback_functions.html">Callbacks</a>
-    </div>
+      <div class="section">
+        <h2>2. Operators + Conditions</h2>
+        <div class="topic">
+          <a href="04arithmetic_operators.html">04. Arithmetic Operators</a>
+          <p class="desc">Math calculation sikho: +, -, *, /, %, **.</p>
+          <p class="interview">
+            Interview: modulus use case and exponent operator.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="05assignment_operators.html">05. Assignment Operators</a>
+          <p class="desc">
+            Variable ki value update karna sikho: +=, -=, *=, /=, %=.
+          </p>
+          <p class="interview">Interview: x += 5 is same as x = x + 5.</p>
+        </div>
+        <div class="topic">
+          <a href="06increment_decrement.html">06. Increment / Decrement</a>
+          <p class="desc">
+            Value ko 1 se increase/decrease karna sikho using ++ and --.
+          </p>
+          <p class="interview">Interview: pre-increment vs post-increment.</p>
+        </div>
+        <div class="topic">
+          <a href="07comparison_operators.html">07. Comparison Operators</a>
+          <p class="desc">
+            Do values compare karke true/false result lena sikho.
+          </p>
+          <p class="interview">Interview: == vs === and != vs !==.</p>
+        </div>
+        <div class="topic">
+          <a href="08logical_operators.html">08. Logical Operators</a>
+          <p class="desc">
+            Multiple conditions combine karna sikho using &&, ||, !.
+          </p>
+          <p class="interview">Interview: short-circuit evaluation.</p>
+        </div>
+        <div class="topic">
+          <a href="09ternary_operator.html">09. Ternary Operator</a>
+          <p class="desc">
+            Simple if/else ko one-line expression me likhna sikho.
+          </p>
+          <p class="interview">
+            Interview: condition ? trueValue : falseValue.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="10conditions.html">10. Conditions</a>
+          <p class="desc">if, else if, else se decision making sikho.</p>
+          <p class="interview">
+            Interview: condition order matters in else-if ladder.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="11switch.html">11. Switch Statement</a>
+          <p class="desc">Ek value ko multiple cases se compare karna sikho.</p>
+          <p class="interview">
+            Interview: break missing ho to fall-through hota hai.
+          </p>
+        </div>
+      </div>
 
-    <div class="section">
-      <h2>4. Data Structures + DOM</h2>
-      <a href="23objects.html">Objects</a>
-      <a href="24array.html">Arrays</a>
-      <a href="25arrayMethods.html">Array Methods 1</a>
-      <a href="26arrayMethods2.html">Array Methods 2</a>
-      <a href="27string_methods.html">String Methods</a>
-      <a href="30dom.html">DOM</a>
-      <a href="31dom_events.html">DOM Events</a>
-    </div>
+      <div class="section">
+        <h2>3. Loops + Functions</h2>
+        <div class="topic">
+          <a href="12loops.html">12. Loops</a>
+          <p class="desc">
+            Same code ko repeat karna sikho using loop concept.
+          </p>
+          <p class="interview">
+            Interview: loop condition, update, infinite loop.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="13whileLoop.html">13. While Loop</a>
+          <p class="desc">
+            Jab condition true ho tab tak loop run karna sikho.
+          </p>
+          <p class="interview">
+            Interview: while loop condition pehle check karta hai.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="14doWhileLoop.html">14. Do While Loop</a>
+          <p class="desc">
+            Code ko kam se kam ek baar run karna sikho, phir condition check
+            hoti hai.
+          </p>
+          <p class="interview">
+            Interview: do while at least once execute hota hai.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="15forLoop.html">15. For Loop</a>
+          <p class="desc">
+            Fixed number of repetitions ke liye for loop use karna sikho.
+          </p>
+          <p class="interview">
+            Interview: initialization, condition, increment flow.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="16forInLoop.html">16. For In Loop</a>
+          <p class="desc">
+            Object keys ya string indexes par loop chalana sikho.
+          </p>
+          <p class="interview">Interview: for-in keys deta hai, values nahi.</p>
+        </div>
+        <div class="topic">
+          <a href="17forOfLoop.html">17. For Of Loop</a>
+          <p class="desc">
+            Array/string ke direct values par loop chalana sikho.
+          </p>
+          <p class="interview">Interview: for-of iterable values deta hai.</p>
+        </div>
+        <div class="topic">
+          <a href="18functions.html">18. Functions</a>
+          <p class="desc">
+            Reusable code block banana sikho: normal function, arrow function,
+            return value.
+          </p>
+          <p class="interview">
+            Interview: function declaration vs expression vs arrow function.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="19scope.html">19. Scope</a>
+          <p class="desc">
+            Variable kaha access ho sakta hai ye samjho: global, function, block
+            scope.
+          </p>
+          <p class="interview">
+            Interview: var function scoped, let/const block scoped.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="20callback_functions.html">20. Callback Functions</a>
+          <p class="desc">
+            Function ko dusre function me argument ki tarah pass karna sikho.
+          </p>
+          <p class="interview">
+            Interview: callbacks async programming ka base hain.
+          </p>
+        </div>
+      </div>
 
-    <div class="section">
-      <h2>5. Interview Topics</h2>
-      <a href="35rest_default_params.html">Rest + Default Params</a>
-      <a href="36hoisting.html">Hoisting</a>
-      <a href="37closure.html">Closure</a>
-      <a href="38this_keyword.html">this Keyword</a>
-      <a href="39constructor_class.html">Constructor + Class</a>
-      <a href="40prototype.html">Prototype</a>
-      <a href="41map_set.html">Map + Set</a>
-      <a href="42json_localStorage.html">JSON + localStorage</a>
-      <a href="43promise.html">Promise</a>
-      <a href="44async_await.html">Async Await</a>
-      <a href="45event_loop.html">Event Loop</a>
-      <a href="46modules.html">Modules</a>
-      <a href="47interview_questions.html">Interview Questions</a>
-    </div>
+      <div class="section">
+        <h2>4. Error Handling + Data Structures</h2>
+        <div class="topic">
+          <a href="21tryCatch.html">21. Try Catch Finally</a>
+          <p class="desc">
+            Runtime errors ko handle karna sikho taki app crash na ho.
+          </p>
+          <p class="interview">
+            Interview: try, catch, finally execution flow.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="22throwError.html">22. Throw Error</a>
+          <p class="desc">Custom error create karna sikho using throw.</p>
+          <p class="interview">
+            Interview: throw new Error() kab use karte hain.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="23objects.html">23. Objects</a>
+          <p class="desc">
+            Related data ko key-value pair me store karna sikho.
+          </p>
+          <p class="interview">
+            Interview: dot vs bracket access, method, this.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="24array.html">24. Arrays</a>
+          <p class="desc">
+            Multiple values ko ordered list me store karna sikho.
+          </p>
+          <p class="interview">Interview: index, length, sparse arrays.</p>
+        </div>
+        <div class="topic">
+          <a href="25arrayMethods.html">25. Array Methods Part 1</a>
+          <p class="desc">
+            Basic array methods sikho: push, pop, shift, unshift, splice, slice,
+            map.
+          </p>
+          <p class="interview">Interview: mutating vs non-mutating methods.</p>
+        </div>
+        <div class="topic">
+          <a href="26arrayMethods2.html">26. Array Methods Part 2</a>
+          <p class="desc">
+            Advanced methods sikho: forEach, filter, find, reduce, some, every.
+          </p>
+          <p class="interview">
+            Interview: map vs forEach, filter vs find, reduce use case.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="27string_methods.html">27. String Methods</a>
+          <p class="desc">
+            Text modify/search karna sikho: trim, includes, slice, replace,
+            split.
+          </p>
+          <p class="interview">Interview: strings immutable hote hain.</p>
+        </div>
+        <div class="topic">
+          <a href="28math_object.html">28. Math Object</a>
+          <p class="desc">
+            Common math utilities sikho: round, floor, ceil, random, min, max.
+          </p>
+          <p class="interview">Interview: random number range formula.</p>
+        </div>
+        <div class="topic">
+          <a href="29date_object.html">29. Date Object</a>
+          <p class="desc">
+            Date/time read karna sikho using Date object methods.
+          </p>
+          <p class="interview">Interview: getMonth() zero-based hota hai.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>5. DOM + ES6</h2>
+        <div class="topic">
+          <a href="30dom.html">30. DOM Manipulation</a>
+          <p class="desc">
+            HTML elements ko JavaScript se select aur change karna sikho.
+          </p>
+          <p class="interview">
+            Interview: innerText vs innerHTML, style changes.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="31dom_events.html">31. DOM Events</a>
+          <p class="desc">
+            User actions handle karna sikho: click, keyup, input.
+          </p>
+          <p class="interview">
+            Interview: addEventListener vs inline onclick.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="32es6_template_literals.html">32. Template Literals</a>
+          <p class="desc">
+            Backticks aur ${} se strings ko clean way me likhna sikho.
+          </p>
+          <p class="interview">
+            Interview: multiline strings and interpolation.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="33destructuring.html">33. Destructuring</a>
+          <p class="desc">
+            Object/array values ko direct variables me extract karna sikho.
+          </p>
+          <p class="interview">
+            Interview: object destructuring in function parameters.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="34spread.html">34. Spread Operator</a>
+          <p class="desc">
+            Array/object copy, merge aur expand karna sikho using ...
+          </p>
+          <p class="interview">Interview: spread vs rest difference.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>6. Interview Topics</h2>
+        <div class="topic">
+          <a href="35rest_default_params.html">35. Rest + Default Params</a>
+          <p class="desc">
+            Default value aur unlimited arguments handle karna sikho.
+          </p>
+          <p class="interview">
+            Interview: rest collects values, spread expands values.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="36hoisting.html">36. Hoisting</a>
+          <p class="desc">
+            JavaScript execution se pehle declarations ko memory me kaise rakhta
+            hai ye samjho.
+          </p>
+          <p class="interview">
+            Interview: var hoisting, function hoisting, temporal dead zone.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="37closure.html">37. Closure</a>
+          <p class="desc">
+            Inner function outer variable ko kaise remember karta hai ye samjho.
+          </p>
+          <p class="interview">
+            Interview: private variable, counter, lexical scope.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="38this_keyword.html">38. this Keyword</a>
+          <p class="desc">
+            this kis object ko point karega ye function call style se samjho.
+          </p>
+          <p class="interview">
+            Interview: normal function this vs arrow function this.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="39constructor_class.html">39. Constructor + Class</a>
+          <p class="desc">Same structure ke multiple objects banana sikho.</p>
+          <p class="interview">
+            Interview: class is syntactic sugar over prototype.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="40prototype.html">40. Prototype</a>
+          <p class="desc">
+            JavaScript inheritance aur shared methods ka base samjho.
+          </p>
+          <p class="interview">Interview: prototype chain and method lookup.</p>
+        </div>
+        <div class="topic">
+          <a href="41map_set.html">41. Map + Set</a>
+          <p class="desc">
+            Map me key-value data aur Set me unique values store karna sikho.
+          </p>
+          <p class="interview">
+            Interview: object vs Map, array duplicate remove using Set.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="42json_localStorage.html">42. JSON + localStorage</a>
+          <p class="desc">
+            Object ko JSON string me convert karke browser storage me save karna
+            sikho.
+          </p>
+          <p class="interview">
+            Interview: JSON.stringify, JSON.parse, localStorage stores strings.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="43promise.html">43. Promise</a>
+          <p class="desc">
+            Future async result handle karna sikho using then and catch.
+          </p>
+          <p class="interview">
+            Interview: pending, fulfilled, rejected states.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="44async_await.html">44. Async Await</a>
+          <p class="desc">
+            Promise code ko readable synchronous style me likhna sikho.
+          </p>
+          <p class="interview">Interview: await only inside async function.</p>
+        </div>
+        <div class="topic">
+          <a href="45event_loop.html">45. Event Loop</a>
+          <p class="desc">
+            Synchronous code, promise microtask, setTimeout callback order
+            samjho.
+          </p>
+          <p class="interview">
+            Interview: call stack, microtask queue, callback queue.
+          </p>
+        </div>
+        <div class="topic">
+          <a href="46modules.html">46. Modules</a>
+          <p class="desc">
+            Code ko multiple files me split karna sikho using import/export.
+          </p>
+          <p class="interview">Interview: named export vs default export.</p>
+        </div>
+        <div class="topic">
+          <a href="47interview_questions.html">47. Interview Questions</a>
+          <p class="desc">
+            Final revision ke liye common JavaScript interview questions
+            practice karo.
+          </p>
+          <p class="interview">
+            Interview: har question ka answer example ke sath bolne ki practice
+            karo.
+          </p>
+        </div>
+      </div>
+
+      <script>
+        document.querySelectorAll(".topic").forEach(function (topic) {
+          if (!topic.querySelector(".teach")) {
+            let teachLine = document.createElement("p");
+            teachLine.className = "teach";
+            teachLine.innerText =
+              "Teach: Definition bolo, ek real example do, output explain karo, phir interview point repeat karo.";
+
+            let desc = topic.querySelector(".desc");
+            if (desc) {
+              desc.insertAdjacentElement("afterend", teachLine);
+            }
+          }
+        });
+      </script>
+    </main>
   </body>
 </html>

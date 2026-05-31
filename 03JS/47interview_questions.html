@@ -4,36 +4,302 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Interview Questions</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #0f172a;
+        color: #e5e7eb;
+        font-family:
+          Inter,
+          Segoe UI,
+          Arial,
+          sans-serif;
+        line-height: 1.55;
+        margin: 0;
+      }
+
+      main {
+        max-width: 1050px;
+        margin: 0 auto;
+        padding: 28px 18px 44px;
+      }
+
+      .hero,
+      .question {
+        background: #111827;
+        border: 1px solid #334155;
+        border-radius: 8px;
+      }
+
+      .hero {
+        margin-bottom: 18px;
+        padding: 22px;
+      }
+
+      h1,
+      h2 {
+        color: #f8fafc;
+        margin-top: 0;
+      }
+
+      .formula {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-top: 16px;
+      }
+
+      .step {
+        background: #0b1220;
+        border: 1px solid #334155;
+        border-radius: 8px;
+        padding: 12px;
+      }
+
+      .step b {
+        color: #38bdf8;
+        display: block;
+      }
+
+      .question {
+        margin: 12px 0;
+        padding: 16px;
+      }
+
+      .answer {
+        color: #d1d5db;
+        margin-bottom: 8px;
+      }
+
+      .teach {
+        color: #86efac;
+        margin-bottom: 0;
+      }
+
+      code {
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 4px;
+        color: #fbbf24;
+        padding: 1px 5px;
+      }
+
+      @media (max-width: 780px) {
+        .formula {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script src="navigation.js" defer></script>
   </head>
 
   <body>
-    <h1>JavaScript Interview Questions</h1>
-    <p>
-      In questions ko revise karo. Har answer ke liye related file open karke
-      example run karo.
-    </p>
+    <main>
+      <section class="hero">
+        <h1>JavaScript Interview Questions</h1>
+        <p>
+          In questions ko sirf ratna nahi hai. Har answer ko teacher style me
+          bolo: simple definition, small example, output, aur interview point.
+        </p>
 
-    <ol>
-      <li>var, let, const me difference kya hai?</li>
-      <li>Primitive aur reference data types me difference kya hai?</li>
-      <li>== aur === me kya difference hai?</li>
-      <li>Hoisting kya hoti hai?</li>
-      <li>Temporal Dead Zone kya hota hai?</li>
-      <li>Closure kya hota hai? Real example do.</li>
-      <li>Callback function kya hota hai?</li>
-      <li>Promise states kaun-kaun si hoti hain?</li>
-      <li>async/await promise se kaise different hai?</li>
-      <li>Event loop kya karta hai?</li>
-      <li>for in aur for of me difference kya hai?</li>
-      <li>map, filter, reduce me difference kya hai?</li>
-      <li>this keyword ka value kaise decide hota hai?</li>
-      <li>Prototype kya hota hai?</li>
-      <li>Class aur constructor function me relation kya hai?</li>
-      <li>localStorage aur sessionStorage me difference kya hai?</li>
-      <li>JSON.stringify aur JSON.parse ka use kya hai?</li>
-      <li>Event bubbling kya hota hai?</li>
-      <li>Spread aur rest operator me difference kya hai?</li>
-      <li>Shallow copy aur deep copy kya hoti hai?</li>
-    </ol>
+        <div class="formula">
+          <div class="step">
+            <b>1. Define</b>
+            One-line meaning bolo.
+          </div>
+          <div class="step">
+            <b>2. Example</b>
+            Small code ya real-life example do.
+          </div>
+          <div class="step">
+            <b>3. Output</b>
+            Result explain karo.
+          </div>
+          <div class="step">
+            <b>4. Caution</b>
+            Common mistake ya interview point bolo.
+          </div>
+        </div>
+      </section>
+
+      <section class="question">
+        <h2>1. var, let, const me difference kya hai?</h2>
+        <p class="answer">
+          <code>var</code> function scoped hota hai, <code>let</code> aur
+          <code>const</code> block scoped hote hain. <code>const</code> variable
+          ko reassign nahi kar sakte.
+        </p>
+        <p class="teach">
+          Teach: Box example do: var old box, let changeable block box, const
+          fixed label box.
+        </p>
+      </section>
+
+      <section class="question">
+        <h2>2. Primitive aur reference data types me difference kya hai?</h2>
+        <p class="answer">
+          Primitive values direct value store karti hain. Reference types memory
+          address store karte hain. Object aur array reference type hain.
+        </p>
+        <p class="teach">
+          Teach: Primitive photocopy jaisa, reference original file location
+          jaisa.
+        </p>
+      </section>
+
+      <section class="question">
+        <h2>3. == aur === me kya difference hai?</h2>
+        <p class="answer">
+          <code>==</code> value compare karta hai type conversion ke baad.
+          <code>===</code> value aur type dono compare karta hai.
+        </p>
+        <p class="teach">
+          Teach: Interview me bolo: mostly === use karna safer hai.
+        </p>
+      </section>
+
+      <section class="question">
+        <h2>4. Hoisting kya hoti hai?</h2>
+        <p class="answer">
+          JavaScript execution se pehle declarations ko memory me register kar
+          leti hai. Function declaration pehle call ho sakti hai, var undefined
+          deta hai, let/const TDZ me error dete hain.
+        </p>
+        <p class="teach">
+          Teach: Code run hone se pehle JS attendance register banata hai.
+        </p>
+      </section>
+
+      <section class="question">
+        <h2>5. Closure kya hota hai?</h2>
+        <p class="answer">
+          Closure tab banta hai jab inner function outer function ke variable ko
+          remember karta hai, even outer function execute ho chuka ho.
+        </p>
+        <p class="teach">
+          Teach: Counter example do: count private rehta hai but inner function
+          usko update karta hai.
+        </p>
+      </section>
+
+      <section class="question">
+        <h2>6. Callback function kya hota hai?</h2>
+        <p class="answer">
+          Callback ek function hota hai jo dusre function me argument ke form me
+          pass hota hai aur baad me execute hota hai.
+        </p>
+        <p class="teach">
+          Teach: Pizza order example do: order do, ready hone par callback call
+          hota hai.
+        </p>
+      </section>
+
+      <section class="question">
+        <h2>7. Promise states kaun-kaun si hoti hain?</h2>
+        <p class="answer">
+          Promise ki 3 states hoti hain: pending, fulfilled, rejected.
+          <code>then</code> success handle karta hai, <code>catch</code> error.
+        </p>
+        <p class="teach">
+          Teach: Online delivery example: pending, delivered, failed.
+        </p>
+      </section>
+
+      <section class="question">
+        <h2>8. async/await promise se kaise different hai?</h2>
+        <p class="answer">
+          async/await promise ko readable style me likhne ka syntax hai.
+          Internally promise hi use hota hai.
+        </p>
+        <p class="teach">
+          Teach: then/catch chain ko clean sentence jaisa banana async/await ka
+          kaam hai.
+        </p>
+      </section>
+
+      <section class="question">
+        <h2>9. Event loop kya karta hai?</h2>
+        <p class="answer">
+          Event loop call stack empty hone ke baad microtask queue aur callback
+          queue se tasks execute karwata hai.
+        </p>
+        <p class="teach">
+          Teach: Synchronous code first, promise microtask second, setTimeout
+          later.
+        </p>
+      </section>
+
+      <section class="question">
+        <h2>10. for in aur for of me difference kya hai?</h2>
+        <p class="answer">
+          <code>for in</code> keys/index deta hai. <code>for of</code> iterable
+          values deta hai.
+        </p>
+        <p class="teach">
+          Teach: Object keys ke liye for-in, array values ke liye for-of.
+        </p>
+      </section>
+
+      <section class="question">
+        <h2>11. map, filter, reduce me difference kya hai?</h2>
+        <p class="answer">
+          <code>map</code> new transformed array banata hai,
+          <code>filter</code> condition pass values rakhta hai,
+          <code>reduce</code> array ko single result me convert karta hai.
+        </p>
+        <p class="teach">
+          Teach: map changes each item, filter selects items, reduce makes final
+          total.
+        </p>
+      </section>
+
+      <section class="question">
+        <h2>12. this keyword ka value kaise decide hota hai?</h2>
+        <p class="answer">
+          <code>this</code> ka value function kaise call hua us par depend karta
+          hai. Object method me this object ko point karta hai.
+        </p>
+        <p class="teach">
+          Teach: this ko caller ke naam se explain karo: jisne function call
+          kiya, this aksar wahi hota hai.
+        </p>
+      </section>
+
+      <section class="question">
+        <h2>13. Prototype kya hota hai?</h2>
+        <p class="answer">
+          Prototype shared methods aur inheritance ka mechanism hai. Object
+          method nahi milta to prototype chain me search hota hai.
+        </p>
+        <p class="teach">
+          Teach: Shared toolbox example do: har object apna copy nahi rakhta.
+        </p>
+      </section>
+
+      <section class="question">
+        <h2>14. localStorage aur sessionStorage me difference kya hai?</h2>
+        <p class="answer">
+          localStorage data browser me tab close ke baad bhi rakhta hai.
+          sessionStorage data tab/session close hone par remove hota hai.
+        </p>
+        <p class="teach">
+          Teach: localStorage permanent notebook, sessionStorage temporary rough
+          page.
+        </p>
+      </section>
+
+      <section class="question">
+        <h2>15. Spread aur rest operator me difference kya hai?</h2>
+        <p class="answer">
+          Spread values ko expand karta hai. Rest multiple values ko collect
+          karke array banata hai. Dono syntax <code>...</code> use karte hain.
+        </p>
+        <p class="teach">Teach: Spread unpacking hai, rest packing hai.</p>
+      </section>
+    </main>
   </body>
 </html>
