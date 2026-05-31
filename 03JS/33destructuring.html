@@ -1,27 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <body>
-
     <h1>ES6 Destructuring</h1>
-    <p>Destructuring se array ya object ke values ko direct variables me store kar sakte hain.</p>
+    <p>
+      Destructuring se array ya object ke values ko direct variables me store
+      kar sakte hain.
+    </p>
     <button onclick="showData()">Show Data</button>
     <p id="output"></p>
 
     <script>
-
       // In React - destructuring props
       function StudentCard({ name, age, city }) {
         return `${name} is ${age} years old from ${city}`;
       }
 
       function showData() {
-
         // Object destructuring
         let student = {
           name: "Raj",
           age: 22,
           city: "Ahmedabad",
-          course: "MERN Stack"
+          course: "MERN Stack",
         };
 
         let { name, age, city, course } = student;
@@ -43,8 +43,6 @@
           <p>3rd: ${third}</p>
         `;
       }
-
     </script>
-
   </body>
 </html>

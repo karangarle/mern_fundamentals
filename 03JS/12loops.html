@@ -1,13 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>loops</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>JavaScript Loops</h1>
-    <p>Loop ka use same code ko bar-bar run karne ke liye hota hai jab tak condition true rahe.</p>
+    <p>
+      Loop ka use same code ko bar-bar run karne ke liye hota hai jab tak
+      condition true rahe.
+    </p>
     <button onclick="showNumbers()">show numbers</button>
     <button onclick="showTable()">show table of 5</button>
     <button onclick="showArray()">Show Fruits</button>
@@ -15,40 +18,37 @@
     <p id="output"></p>
 
     <script>
+      // This function prints numbers from 1 to 10 using a for loop.
+      function showNumbers() {
+        let Result = "";
 
-        // This function prints numbers from 1 to 10 using a for loop.
-        function showNumbers(){
-            let Result = "";
-
-            for (let i = 1; i <= 10; i++) {
-                Result = Result + "Numbers : " + i + "\n";
-            }
-
-            document.getElementById("output").innerText = Result;
+        for (let i = 1; i <= 10; i++) {
+          Result = Result + "Numbers : " + i + "\n";
         }
 
-        function showTable(){
-            let Result = "";
+        document.getElementById("output").innerText = Result;
+      }
 
-            for(let i = 1 ; i <=10 ; i++){
-                Result = Result + "5 * " + i + "= " + (5 * i) + "\n";
-            }
+      function showTable() {
+        let Result = "";
 
-            document.getElementById("output").innerText = Result;
+        for (let i = 1; i <= 10; i++) {
+          Result = Result + "5 * " + i + "= " + 5 * i + "\n";
         }
 
-        function showArray(){
-            let Result = ["Mango","Apple","Banana"];
-            let data = "";
+        document.getElementById("output").innerText = Result;
+      }
 
-            for(let i = 0;i < Result.length; i++){
-                console.log(Result[i]);
-                data += Result[i]+ " " + "\n";
-            }
-            document.getElementById("output").innerText = Result;
+      function showArray() {
+        let Result = ["Mango", "Apple", "Banana"];
+        let data = "";
+
+        for (let i = 0; i < Result.length; i++) {
+          console.log(Result[i]);
+          data += Result[i] + " " + "\n";
         }
-
+        document.getElementById("output").innerText = Result;
+      }
     </script>
-
-</body>
+  </body>
 </html>

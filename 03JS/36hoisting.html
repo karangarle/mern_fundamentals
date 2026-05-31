@@ -1,29 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Hoisting</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        document.write("<h2>JavaScript Hoisting</h2>");
-        document.write("Hoisting ka matlab JavaScript declarations ko memory me pehle register kar leti hai. Interview me var, let, const aur function hoisting bahut important hai.<br><br>");
+      document.write("<h2>JavaScript Hoisting</h2>");
+      document.write(
+        "Hoisting ka matlab JavaScript declarations ko memory me pehle register kar leti hai. Interview me var, let, const aur function hoisting bahut important hai.<br><br>",
+      );
 
-        document.write(`Function call before declaration: ${add(10, 20)} <br>`);
+      document.write(`Function call before declaration: ${add(10, 20)} <br>`);
 
-        function add(a, b) {
-            return a + b;
-        }
+      function add(a, b) {
+        return a + b;
+      }
 
-        document.write(`var before declaration gives: ${score} <br>`);
-        var score = 50;
-        document.write(`var after declaration gives: ${score} <br><br>`);
+      document.write(`var before declaration gives: ${score} <br>`);
+      var score = 50;
+      document.write(`var after declaration gives: ${score} <br><br>`);
 
-        document.write("let/const bhi hoist hote hain, but temporal dead zone ki wajah se declaration se pehle access karne par error aata hai.<br>");
+      document.write(
+        "let/const bhi hoist hote hain, but temporal dead zone ki wajah se declaration se pehle access karne par error aata hai.<br>",
+      );
     </script>
-</body>
-
+  </body>
 </html>

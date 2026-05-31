@@ -1,38 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Async Await</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>JavaScript Async Await</h1>
     <p>async/await promise ko easy readable style me handle karta hai.</p>
     <button onclick="loadUser()">Load User</button>
     <p id="output"></p>
 
     <script>
-        function fetchUser() {
-            return new Promise(function (resolve) {
-                setTimeout(function () {
-                    resolve({ name: "Karan", role: "Frontend Developer" });
-                }, 1500);
-            });
-        }
+      function fetchUser() {
+        return new Promise(function (resolve) {
+          setTimeout(function () {
+            resolve({ name: "Karan", role: "Frontend Developer" });
+          }, 1500);
+        });
+      }
 
-        async function loadUser() {
-            document.getElementById("output").innerText = "Please wait...";
+      async function loadUser() {
+        document.getElementById("output").innerText = "Please wait...";
 
-            try {
-                let user = await fetchUser();
-                document.getElementById("output").innerText = `${user.name} - ${user.role}`;
-            } catch (error) {
-                document.getElementById("output").innerText = "Error loading user";
-            }
+        try {
+          let user = await fetchUser();
+          document.getElementById("output").innerText =
+            `${user.name} - ${user.role}`;
+        } catch (error) {
+          document.getElementById("output").innerText = "Error loading user";
         }
+      }
     </script>
-</body>
-
+  </body>
 </html>

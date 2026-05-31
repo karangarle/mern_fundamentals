@@ -1,26 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>JavaScript User Defined Exceptions In Hindi </title>
+    <meta charset="utf-8" />
+    <title>JavaScript User Defined Exceptions In Hindi</title>
   </head>
   <body>
     <script type="text/javascript">
       document.write("<h2>JavaScript Throw Error</h2>");
-      document.write("Throw ka use apna custom error create karne ke liye hota hai.<br><br>");
+      document.write(
+        "Throw ka use apna custom error create karne ke liye hota hai.<br><br>",
+      );
 
-      try
-      {
-        let num = prompt('Enter Any Number : ');
-        if(num == 0)
-          throw new Error("Invalid number");
-        else
-          document.write(`You entered : ${num}`);
-      } 
-      catch(ErrorObj)
-      {
-        document.write(`Error Name : ${ErrorObj.name} <br>`);  /* print Error name */
-        document.write(`Error Message : ${ErrorObj.message}`); /* print Error message */
+      try {
+        let num = prompt("Enter Any Number : ");
+        if (num == 0) throw new Error("Invalid number");
+        else document.write(`You entered : ${num}`);
+      } catch (ErrorObj) {
+        document.write(
+          `Error Name : ${ErrorObj.name} <br>`,
+        ); /* print Error name */
+        document.write(
+          `Error Message : ${ErrorObj.message}`,
+        ); /* print Error message */
       }
     </script>
   </body>

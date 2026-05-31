@@ -1,39 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Objects</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        document.write("<h2>JavaScript Objects</h2>");
-        document.write("Object ka use related data ko key-value pair me store karne ke liye hota hai.<br><br>");
+      document.write("<h2>JavaScript Objects</h2>");
+      document.write(
+        "Object ka use related data ko key-value pair me store karne ke liye hota hai.<br><br>",
+      );
 
-        let student = {
-            name: "Karan",
-            age: 24,
-            city: "Ahmedabad",
-            course: "MERN Stack",
-            showInfo: function () {
-                return `${this.name} ${this.course} course learn kar raha hai.`;
-            }
-        };
+      let student = {
+        name: "Karan",
+        age: 24,
+        city: "Ahmedabad",
+        course: "MERN Stack",
+        showInfo: function () {
+          return `${this.name} ${this.course} course learn kar raha hai.`;
+        },
+      };
 
-        document.write(`Name : ${student.name} <br>`);
-        document.write(`Age : ${student.age} <br>`);
-        document.write(`City : ${student["city"]} <br>`);
-        document.write(`Course : ${student.course} <br>`);
-        document.write(`Method Output : ${student.showInfo()} <br><br>`);
+      document.write(`Name : ${student.name} <br>`);
+      document.write(`Age : ${student.age} <br>`);
+      document.write(`City : ${student["city"]} <br>`);
+      document.write(`Course : ${student.course} <br>`);
+      document.write(`Method Output : ${student.showInfo()} <br><br>`);
 
-        student.age = 25;
-        student.email = "karan@example.com";
+      student.age = 25;
+      student.email = "karan@example.com";
 
-        document.write(`Updated Age : ${student.age} <br>`);
-        document.write(`New Email : ${student.email} <br>`);
+      document.write(`Updated Age : ${student.age} <br>`);
+      document.write(`New Email : ${student.email} <br>`);
     </script>
-</body>
-
+  </body>
 </html>

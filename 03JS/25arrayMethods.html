@@ -1,122 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Array Methods Part 1</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
-        document.write(`<h2>JavaScript Array Methods Part 1</h2>`);
-        document.write(`Array methods ready-made functions hote hain jo array par kaam karna easy banate hain.<br><br>`);
+      document.write(`<h2>JavaScript Array Methods Part 1</h2>`);
+      document.write(
+        `Array methods ready-made functions hote hain jo array par kaam karna easy banate hain.<br><br>`,
+      );
 
-        /* defining JavaScript Array.isArray() method */
-        document.write(`<br>defining JavaScript Array.isArray() method <br>`);
-        document.write(`Array Values : ${[12, 14, 11, 45, 67]} <br>`);
-        document.write(Array.isArray([12, 14, 11, 45, 67]) + "<br>");
+      /* defining JavaScript Array.isArray() method */
+      document.write(`<br>defining JavaScript Array.isArray() method <br>`);
+      document.write(`Array Values : ${[12, 14, 11, 45, 67]} <br>`);
+      document.write(Array.isArray([12, 14, 11, 45, 67]) + "<br>");
 
-        document.write(`Array Values : ${[12, 14, 11, 'karan', 5000.00]} <br>`);
-        document.write(Array.isArray([12, 14, 11, 'karan', 5000.00]) + "<br>");
+      document.write(`Array Values : ${[12, 14, 11, "karan", 5000.0]} <br>`);
+      document.write(Array.isArray([12, 14, 11, "karan", 5000.0]) + "<br>");
 
-        document.write(`Array Values : ${[12, 14, 11, true, false]} <br>`);
-        document.write(Array.isArray([12, 14, 11, true, false]) + "<br>");
+      document.write(`Array Values : ${[12, 14, 11, true, false]} <br>`);
+      document.write(Array.isArray([12, 14, 11, true, false]) + "<br>");
 
-        document.write("Name : " + Array.isArray("karan") + "<br>");
-        document.write("Number : " + Array.isArray(12345) + "<br>");
+      document.write("Name : " + Array.isArray("karan") + "<br>");
+      document.write("Number : " + Array.isArray(12345) + "<br>");
 
-        /* defining JavaScript Array.indexOf() method */
-        document.write(`<br>defining JavaScript Array.indexOf() method <br>`);
-        let arr = [23, 56, 56, 'name', 'Rahul'];
-        document.write(arr.indexOf('Rahul') + "<br>"); /*4*/
-        document.write(arr.indexOf('rahul') + "<br>"); /* -1 */
-        document.write(arr.indexOf('23') + "<br>"); /* -1 */
-        document.write(arr.indexOf(23) + "<br>"); /* 0 */
-        document.write(arr.indexOf(56) + "<br>"); /* 1 */
-        document.write(arr.indexOf('name') + "<br>"); /* 3 */
+      /* defining JavaScript Array.indexOf() method */
+      document.write(`<br>defining JavaScript Array.indexOf() method <br>`);
+      let arr = [23, 56, 56, "name", "Rahul"];
+      document.write(arr.indexOf("Rahul") + "<br>"); /*4*/
+      document.write(arr.indexOf("rahul") + "<br>"); /* -1 */
+      document.write(arr.indexOf("23") + "<br>"); /* -1 */
+      document.write(arr.indexOf(23) + "<br>"); /* 0 */
+      document.write(arr.indexOf(56) + "<br>"); /* 1 */
+      document.write(arr.indexOf("name") + "<br>"); /* 3 */
 
-        /* defining JavaScript Array.lastIndexOf() method */
-        document.write(`<br>defining JavaScript Array.lastIndexOf() method <br>`);
-        document.write(arr.lastIndexOf(56) + "<br>"); /* 2 */
-        document.write(arr.lastIndexOf('name') + "<br>"); /* 3 */
-        document.write(arr.lastIndexOf('name1') + "<br>"); /* -1 */
-        document.write(arr.lastIndexOf(23) + "<br>"); /* 0 */
+      /* defining JavaScript Array.lastIndexOf() method */
+      document.write(`<br>defining JavaScript Array.lastIndexOf() method <br>`);
+      document.write(arr.lastIndexOf(56) + "<br>"); /* 2 */
+      document.write(arr.lastIndexOf("name") + "<br>"); /* 3 */
+      document.write(arr.lastIndexOf("name1") + "<br>"); /* -1 */
+      document.write(arr.lastIndexOf(23) + "<br>"); /* 0 */
 
-        /* defining JavaScript Array.map() method */
-        document.write(`<br>defining JavaScript Array.map() method <br>`);
-        let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      /* defining JavaScript Array.map() method */
+      document.write(`<br>defining JavaScript Array.map() method <br>`);
+      let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-        let new_array = arr1.map(function (value, index) {
-            return value * 2;
-        });
-        document.write(`New Array : ${new_array} <br>`);
+      let new_array = arr1.map(function (value, index) {
+        return value * 2;
+      });
+      document.write(`New Array : ${new_array} <br>`);
 
-        let new_array1 = arr1.map(value => value * 2);
-        document.write(`New Array : ${new_array1} <br>`);
+      let new_array1 = arr1.map((value) => value * 2);
+      document.write(`New Array : ${new_array1} <br>`);
 
-        /* defining JavaScript Array.sort() method */
-        document.write(`<br>defining JavaScript Array.sort() method <br>`);
-        let arr2 = [100, 23, 56, 56, 'name', 'Rahul'];
-        document.write(`Before Sort : ${arr2} <br>`);
-        document.write(`After Sort : ${arr2.sort()} <br>`);
+      /* defining JavaScript Array.sort() method */
+      document.write(`<br>defining JavaScript Array.sort() method <br>`);
+      let arr2 = [100, 23, 56, 56, "name", "Rahul"];
+      document.write(`Before Sort : ${arr2} <br>`);
+      document.write(`After Sort : ${arr2.sort()} <br>`);
 
-        /* defining JavaScript Array.toString() method */
-        document.write(`<br>defining JavaScript Array.toString() method <br>`);
-        let arr3 = ["Raju", "mohan", 50, "Jhon", true];
-        document.write(`Array Values : ${arr3} <br>`);
-        document.write(`Array to String : ${arr3.toString()} <br>`);
-        document.write(`type of Array : ${typeof arr3} <br>`);
-        document.write(`type of Array to String : ${typeof arr3.toString()} <br>`);
+      /* defining JavaScript Array.toString() method */
+      document.write(`<br>defining JavaScript Array.toString() method <br>`);
+      let arr3 = ["Raju", "mohan", 50, "Jhon", true];
+      document.write(`Array Values : ${arr3} <br>`);
+      document.write(`Array to String : ${arr3.toString()} <br>`);
+      document.write(`type of Array : ${typeof arr3} <br>`);
+      document.write(
+        `type of Array to String : ${typeof arr3.toString()} <br>`,
+      );
 
-        /* defining JavaScript Array.push() method */
-        document.write(`<br>defining JavaScript Array.push() method <br>`);
-        let arr4 = [12, 34, 56];
-        document.write(`Before Push : ${arr4} <br>`);
-        arr4.push(78);
-        document.write(`After Push : ${arr4} <br>`);
+      /* defining JavaScript Array.push() method */
+      document.write(`<br>defining JavaScript Array.push() method <br>`);
+      let arr4 = [12, 34, 56];
+      document.write(`Before Push : ${arr4} <br>`);
+      arr4.push(78);
+      document.write(`After Push : ${arr4} <br>`);
 
-        /* defining JavaScript Array.pop() method */
-        document.write(`<br>defining JavaScript Array.pop() method <br>`);
-        let arr5 = [12, 34, 56];
-        arr5.push(100);
-        document.write(`Before Pop : ${arr5} <br>`);
-        arr5.pop();
-        document.write(`After Pop : ${arr5} <br>`);
+      /* defining JavaScript Array.pop() method */
+      document.write(`<br>defining JavaScript Array.pop() method <br>`);
+      let arr5 = [12, 34, 56];
+      arr5.push(100);
+      document.write(`Before Pop : ${arr5} <br>`);
+      arr5.pop();
+      document.write(`After Pop : ${arr5} <br>`);
 
-        /* defining JavaScript Array.shift() method */
-        document.write(`<br>defining JavaScript Array.shift() method <br>`);
-        let arr6 = [12, 34, 56];
-        arr6.push(200);
-        document.write(`Before Shift : ${arr6} <br>`);
-        arr6.shift();
-        document.write(`After Shift : ${arr6} <br>`);
+      /* defining JavaScript Array.shift() method */
+      document.write(`<br>defining JavaScript Array.shift() method <br>`);
+      let arr6 = [12, 34, 56];
+      arr6.push(200);
+      document.write(`Before Shift : ${arr6} <br>`);
+      arr6.shift();
+      document.write(`After Shift : ${arr6} <br>`);
 
-        /* defining JavaScript Array.unshift() method */
-        document.write(`<br>defining JavaScript Array.unshift() method <br>`);
-        let arr7 = [12, 34, 56];
-        document.write(`Before Unshift : ${arr7} <br>`);
-        arr7.unshift(200);
-        document.write(`After Unshift : ${arr7} <br>`);
+      /* defining JavaScript Array.unshift() method */
+      document.write(`<br>defining JavaScript Array.unshift() method <br>`);
+      let arr7 = [12, 34, 56];
+      document.write(`Before Unshift : ${arr7} <br>`);
+      arr7.unshift(200);
+      document.write(`After Unshift : ${arr7} <br>`);
 
-        /* defining JavaScript Array.splice() method */
-        document.write(`<br>defining JavaScript Array.splice() method <br>`);
-        let arr8 = [12, 34, 56, 78, 90];
-        document.write(`Before Splice : ${arr8} <br>`);
-        arr8.splice(2, 0, 100);
-        document.write(`After Splice : ${arr8} <br>`);
-        arr8.splice(3, 1);
-        document.write(`After Splice : ${arr8} <br>`);
+      /* defining JavaScript Array.splice() method */
+      document.write(`<br>defining JavaScript Array.splice() method <br>`);
+      let arr8 = [12, 34, 56, 78, 90];
+      document.write(`Before Splice : ${arr8} <br>`);
+      arr8.splice(2, 0, 100);
+      document.write(`After Splice : ${arr8} <br>`);
+      arr8.splice(3, 1);
+      document.write(`After Splice : ${arr8} <br>`);
 
-        /* defining JavaScript Array.slice() method */
-        document.write(`<br>defining JavaScript Array.slice() method <br>`);
-        let arr9 = [12, 34, 56, 78, 90];
-        document.write(`Before Slice : ${arr9} <br>`);
-        document.write(`After Slice : ${arr9.slice(2, 4)} <br>`);
-        document.write(`After Slice : ${arr9.slice(2)} <br>`);
-        document.write(`After Slice : ${arr9.slice(0, 3)} <br>`);
+      /* defining JavaScript Array.slice() method */
+      document.write(`<br>defining JavaScript Array.slice() method <br>`);
+      let arr9 = [12, 34, 56, 78, 90];
+      document.write(`Before Slice : ${arr9} <br>`);
+      document.write(`After Slice : ${arr9.slice(2, 4)} <br>`);
+      document.write(`After Slice : ${arr9.slice(2)} <br>`);
+      document.write(`After Slice : ${arr9.slice(0, 3)} <br>`);
     </script>
-</body>
-
+  </body>
 </html>

@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ES6 Template Literals</title>
 
     <style>
-        * {
+      * {
         margin: 0px;
         padding: 0px;
       }
@@ -47,39 +47,51 @@
         margin-bottom: 20px;
       }
 
-      #output{
+      #output {
         padding: 10px;
       }
     </style>
-</head>
-<body class="main-container">
+  </head>
+  <body class="main-container">
     <h1>ES6 Template Literals</h1>
-    <p>Template literals backtick (`) ke andar likhe jate hain aur ${} se variable directly add kar sakte hain.</p>
+    <p>
+      Template literals backtick (`) ke andar likhe jate hain aur ${} se
+      variable directly add kar sakte hain.
+    </p>
 
     <div class="data">
-        <input type="text" name="userName" id="userName" placeholder="Enter Your name">
-        <input type="number" name="salary" id="salary" placeholder="Enter your salary">
-        <button onclick="showMessage()" id="btn-click">Check Tax</button>
-        <p id="output"></p>
+      <input
+        type="text"
+        name="userName"
+        id="userName"
+        placeholder="Enter Your name"
+      />
+      <input
+        type="number"
+        name="salary"
+        id="salary"
+        placeholder="Enter your salary"
+      />
+      <button onclick="showMessage()" id="btn-click">Check Tax</button>
+      <p id="output"></p>
     </div>
 
     <script>
-        // Template literals make string writing easier than old string concatenation.
-        function showMessage(){
-            let name = document.getElementById("userName").value;
-            let salary = Number(document.getElementById("salary").value);
+      // Template literals make string writing easier than old string concatenation.
+      function showMessage() {
+        let name = document.getElementById("userName").value;
+        let salary = Number(document.getElementById("salary").value);
 
-            
-            let oldWay = "Hello " + name + "! Your salary is " + salary + "rupees!";
-            let newWay = `Hello ${name}! Your salary is ${salary} rupees!`;
-            let withTax = `Hello ${name}! After Tax Your salary is ${salary - 500}`;
-            
-            document.getElementById("output").innerHTML = `
+        let oldWay = "Hello " + name + "! Your salary is " + salary + "rupees!";
+        let newWay = `Hello ${name}! Your salary is ${salary} rupees!`;
+        let withTax = `Hello ${name}! After Tax Your salary is ${salary - 500}`;
+
+        document.getElementById("output").innerHTML = `
           <p>Old Way: ${oldWay}</p>
           <p>New Way: ${newWay}</p>
           <p>With Tax: ${withTax}</p>
         `;
-        }
+      }
     </script>
-</body>
+  </body>
 </html>

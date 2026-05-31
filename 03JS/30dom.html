@@ -1,33 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript DOM Manipulation</title>
 
     <style>
-        button {
-            padding: 10px;
-            margin: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+      button {
+        padding: 10px;
+        margin: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
 
-        #myBox{
-            width: 200px;
-            height: 200px;
-            background-color: lightblue;
-            margin: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-        }
+      #myBox {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>DOM Manipulation!</h1>
-    <p>DOM ka use HTML elements ko JavaScript se select, change, hide, show ya style karne ke liye hota hai.</p>
+    <p>
+      DOM ka use HTML elements ko JavaScript se select, change, hide, show ya
+      style karne ke liye hota hai.
+    </p>
 
     <div id="myBox">I am a box!</div>
 
@@ -38,27 +41,26 @@
     <button onclick="changeElement()">Change Element</button>
 
     <script>
-        // getElementById selects an HTML element using its id.
-        function changeText() {
-            document.getElementById("myBox").innerText = "Text Changed"
-        }
+      // getElementById selects an HTML element using its id.
+      function changeText() {
+        document.getElementById("myBox").innerText = "Text Changed";
+      }
 
-        function changeColor(){
-            document.getElementById("myBox").style.backgroundColor = "red"
-        }
+      function changeColor() {
+        document.getElementById("myBox").style.backgroundColor = "red";
+      }
 
-        function hideBox() {
-            document.getElementById("myBox").style.display = "none";
-        }
+      function hideBox() {
+        document.getElementById("myBox").style.display = "none";
+      }
 
-        function showBox(){
-            document.getElementById("myBox").style.display = "flex";
-        }
+      function showBox() {
+        document.getElementById("myBox").style.display = "flex";
+      }
 
-        function changeElement(){
-            document.getElementById("myBox").innerHTML = "<i>element Change</i>";
-        }
-
+      function changeElement() {
+        document.getElementById("myBox").innerHTML = "<i>element Change</i>";
+      }
     </script>
-</body>
+  </body>
 </html>

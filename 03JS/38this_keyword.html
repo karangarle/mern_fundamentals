@@ -1,29 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript this Keyword</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        document.write("<h2>JavaScript this Keyword</h2>");
-        document.write("this current object ko refer karta hai. Iski value function call karne ke tareeke par depend karti hai.<br><br>");
+      document.write("<h2>JavaScript this Keyword</h2>");
+      document.write(
+        "this current object ko refer karta hai. Iski value function call karne ke tareeke par depend karti hai.<br><br>",
+      );
 
-        let student = {
-            name: "Karan",
-            course: "MERN Stack",
-            showInfo: function () {
-                return `${this.name} is learning ${this.course}`;
-            }
-        };
+      let student = {
+        name: "Karan",
+        course: "MERN Stack",
+        showInfo: function () {
+          return `${this.name} is learning ${this.course}`;
+        },
+      };
 
-        document.write(`${student.showInfo()} <br><br>`);
-        document.write("Normal object method me this object ko point karta hai.<br>");
-        document.write("Arrow function me this apna nahi hota, wo parent scope ka this use karta hai. Ye common interview question hai.<br>");
+      document.write(`${student.showInfo()} <br><br>`);
+      document.write(
+        "Normal object method me this object ko point karta hai.<br>",
+      );
+      document.write(
+        "Arrow function me this apna nahi hota, wo parent scope ka this use karta hai. Ye common interview question hai.<br>",
+      );
     </script>
-</body>
-
+  </body>
 </html>

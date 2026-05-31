@@ -1,32 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Scope</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        document.write("<h2>JavaScript Scope</h2>");
-        document.write("Scope batata hai ki variable ko code ke kis part me access kar sakte hain.<br><br>");
+      document.write("<h2>JavaScript Scope</h2>");
+      document.write(
+        "Scope batata hai ki variable ko code ke kis part me access kar sakte hain.<br><br>",
+      );
 
-        let globalName = "Karan"; // global scope: pure script me access ho sakta hai
+      let globalName = "Karan"; // global scope: pure script me access ho sakta hai
 
-        function showScope() {
-            let localCity = "Ahmedabad"; // function scope: sirf function ke andar access hota hai
-            document.write(`Global Variable : ${globalName} <br>`);
-            document.write(`Local Variable : ${localCity} <br>`);
+      function showScope() {
+        let localCity = "Ahmedabad"; // function scope: sirf function ke andar access hota hai
+        document.write(`Global Variable : ${globalName} <br>`);
+        document.write(`Local Variable : ${localCity} <br>`);
 
-            if (true) {
-                let blockValue = "Block Scope Value"; // block scope: sirf is block ke andar
-                document.write(`Block Variable : ${blockValue} <br>`);
-            }
+        if (true) {
+          let blockValue = "Block Scope Value"; // block scope: sirf is block ke andar
+          document.write(`Block Variable : ${blockValue} <br>`);
         }
+      }
 
-        showScope();
+      showScope();
     </script>
-</body>
-
+  </body>
 </html>

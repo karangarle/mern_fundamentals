@@ -1,122 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Array Methods Part 2</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        document.write(`<h2>JavaScript Array Methods Part 2</h2>`);
-        document.write(`Is file me advanced array methods hain jo searching, filtering, total nikalne aur array combine karne me help karte hain.<br><br>`);
+      document.write(`<h2>JavaScript Array Methods Part 2</h2>`);
+      document.write(
+        `Is file me advanced array methods hain jo searching, filtering, total nikalne aur array combine karne me help karte hain.<br><br>`,
+      );
 
-        /* defining JavaScript Array.forEach() method */
-        document.write(`<br><b>1. Array.forEach() method</b><br>`);
-        let numbers = [10, 20, 30, 40, 50];
-        document.write(`Array Values : ${numbers} <br>`);
+      /* defining JavaScript Array.forEach() method */
+      document.write(`<br><b>1. Array.forEach() method</b><br>`);
+      let numbers = [10, 20, 30, 40, 50];
+      document.write(`Array Values : ${numbers} <br>`);
 
-        numbers.forEach(function (value, index) {
-            document.write(`Index ${index} Value ${value} <br>`);
-        });
+      numbers.forEach(function (value, index) {
+        document.write(`Index ${index} Value ${value} <br>`);
+      });
 
-        /* defining JavaScript Array.filter() method */
-        document.write(`<br><b>2. Array.filter() method</b><br>`);
-        let marks = [35, 78, 90, 22, 66, 49];
-        document.write(`Marks : ${marks} <br>`);
+      /* defining JavaScript Array.filter() method */
+      document.write(`<br><b>2. Array.filter() method</b><br>`);
+      let marks = [35, 78, 90, 22, 66, 49];
+      document.write(`Marks : ${marks} <br>`);
 
-        let passedMarks = marks.filter(function (value) {
-            return value >= 50;
-        });
+      let passedMarks = marks.filter(function (value) {
+        return value >= 50;
+      });
 
-        document.write(`Passed Marks : ${passedMarks} <br>`);
+      document.write(`Passed Marks : ${passedMarks} <br>`);
 
-        /* defining JavaScript Array.find() method */
-        document.write(`<br><b>3. Array.find() method</b><br>`);
-        let students = ["Ravi", "Amit", "Karan", "Rahul", "Pooja"];
-        document.write(`Students : ${students} <br>`);
+      /* defining JavaScript Array.find() method */
+      document.write(`<br><b>3. Array.find() method</b><br>`);
+      let students = ["Ravi", "Amit", "Karan", "Rahul", "Pooja"];
+      document.write(`Students : ${students} <br>`);
 
-        let studentName = students.find(function (value) {
-            return value === "Karan";
-        });
+      let studentName = students.find(function (value) {
+        return value === "Karan";
+      });
 
-        document.write(`Find Student : ${studentName} <br>`);
+      document.write(`Find Student : ${studentName} <br>`);
 
-        /* defining JavaScript Array.findIndex() method */
-        document.write(`<br><b>4. Array.findIndex() method</b><br>`);
-        let studentIndex = students.findIndex(function (value) {
-            return value === "Rahul";
-        });
+      /* defining JavaScript Array.findIndex() method */
+      document.write(`<br><b>4. Array.findIndex() method</b><br>`);
+      let studentIndex = students.findIndex(function (value) {
+        return value === "Rahul";
+      });
 
-        document.write(`Rahul Index Number : ${studentIndex} <br>`);
+      document.write(`Rahul Index Number : ${studentIndex} <br>`);
 
-        /* defining JavaScript Array.includes() method */
-        document.write(`<br><b>5. Array.includes() method</b><br>`);
-        document.write(`Students : ${students} <br>`);
-        document.write(`Karan Available : ${students.includes("Karan")} <br>`);
-        document.write(`Sohan Available : ${students.includes("Sohan")} <br>`);
+      /* defining JavaScript Array.includes() method */
+      document.write(`<br><b>5. Array.includes() method</b><br>`);
+      document.write(`Students : ${students} <br>`);
+      document.write(`Karan Available : ${students.includes("Karan")} <br>`);
+      document.write(`Sohan Available : ${students.includes("Sohan")} <br>`);
 
-        /* defining JavaScript Array.reduce() method */
-        document.write(`<br><b>6. Array.reduce() method</b><br>`);
-        let prices = [100, 200, 300, 400];
-        document.write(`Prices : ${prices} <br>`);
+      /* defining JavaScript Array.reduce() method */
+      document.write(`<br><b>6. Array.reduce() method</b><br>`);
+      let prices = [100, 200, 300, 400];
+      document.write(`Prices : ${prices} <br>`);
 
-        let totalPrice = prices.reduce(function (total, value) {
-            return total + value;
-        }, 0);
+      let totalPrice = prices.reduce(function (total, value) {
+        return total + value;
+      }, 0);
 
-        document.write(`Total Price : ${totalPrice} <br>`);
+      document.write(`Total Price : ${totalPrice} <br>`);
 
-        /* defining JavaScript Array.some() method */
-        document.write(`<br><b>7. Array.some() method</b><br>`);
-        let ages = [12, 16, 20, 24];
-        document.write(`Ages : ${ages} <br>`);
+      /* defining JavaScript Array.some() method */
+      document.write(`<br><b>7. Array.some() method</b><br>`);
+      let ages = [12, 16, 20, 24];
+      document.write(`Ages : ${ages} <br>`);
 
-        let hasAdult = ages.some(function (value) {
-            return value >= 18;
-        });
+      let hasAdult = ages.some(function (value) {
+        return value >= 18;
+      });
 
-        document.write(`Any Adult Available : ${hasAdult} <br>`);
+      document.write(`Any Adult Available : ${hasAdult} <br>`);
 
-        /* defining JavaScript Array.every() method */
-        document.write(`<br><b>8. Array.every() method</b><br>`);
-        let allAdults = ages.every(function (value) {
-            return value >= 18;
-        });
+      /* defining JavaScript Array.every() method */
+      document.write(`<br><b>8. Array.every() method</b><br>`);
+      let allAdults = ages.every(function (value) {
+        return value >= 18;
+      });
 
-        document.write(`All Are Adults : ${allAdults} <br>`);
+      document.write(`All Are Adults : ${allAdults} <br>`);
 
-        /* defining JavaScript Array.join() method */
-        document.write(`<br><b>9. Array.join() method</b><br>`);
-        let fruits = ["Apple", "Banana", "Mango", "Orange"];
-        document.write(`Fruits Array : ${fruits} <br>`);
-        document.write(`Join With Space : ${fruits.join(" ")} <br>`);
-        document.write(`Join With Dash : ${fruits.join(" - ")} <br>`);
+      /* defining JavaScript Array.join() method */
+      document.write(`<br><b>9. Array.join() method</b><br>`);
+      let fruits = ["Apple", "Banana", "Mango", "Orange"];
+      document.write(`Fruits Array : ${fruits} <br>`);
+      document.write(`Join With Space : ${fruits.join(" ")} <br>`);
+      document.write(`Join With Dash : ${fruits.join(" - ")} <br>`);
 
-        /* defining JavaScript Array.concat() method */
-        document.write(`<br><b>10. Array.concat() method</b><br>`);
-        let firstArray = [1, 2, 3];
-        let secondArray = [4, 5, 6];
-        let mergedArray = firstArray.concat(secondArray);
+      /* defining JavaScript Array.concat() method */
+      document.write(`<br><b>10. Array.concat() method</b><br>`);
+      let firstArray = [1, 2, 3];
+      let secondArray = [4, 5, 6];
+      let mergedArray = firstArray.concat(secondArray);
 
-        document.write(`First Array : ${firstArray} <br>`);
-        document.write(`Second Array : ${secondArray} <br>`);
-        document.write(`Merged Array : ${mergedArray} <br>`);
+      document.write(`First Array : ${firstArray} <br>`);
+      document.write(`Second Array : ${secondArray} <br>`);
+      document.write(`Merged Array : ${mergedArray} <br>`);
 
-        /* defining JavaScript Array.reverse() method */
-        document.write(`<br><b>11. Array.reverse() method</b><br>`);
-        let reverseArray = [11, 22, 33, 44, 55];
-        document.write(`Before Reverse : ${reverseArray} <br>`);
-        reverseArray.reverse();
-        document.write(`After Reverse : ${reverseArray} <br>`);
+      /* defining JavaScript Array.reverse() method */
+      document.write(`<br><b>11. Array.reverse() method</b><br>`);
+      let reverseArray = [11, 22, 33, 44, 55];
+      document.write(`Before Reverse : ${reverseArray} <br>`);
+      reverseArray.reverse();
+      document.write(`After Reverse : ${reverseArray} <br>`);
 
-        /* defining JavaScript Array.flat() method */
-        document.write(`<br><b>12. Array.flat() method</b><br>`);
-        let nestedArray = [10, 20, [30, 40], [50, 60]];
-        document.write(`Nested Array : ${nestedArray} <br>`);
-        document.write(`Flat Array : ${nestedArray.flat()} <br>`);
+      /* defining JavaScript Array.flat() method */
+      document.write(`<br><b>12. Array.flat() method</b><br>`);
+      let nestedArray = [10, 20, [30, 40], [50, 60]];
+      document.write(`Nested Array : ${nestedArray} <br>`);
+      document.write(`Flat Array : ${nestedArray.flat()} <br>`);
     </script>
-</body>
-
+  </body>
 </html>

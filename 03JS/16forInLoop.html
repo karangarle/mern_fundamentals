@@ -1,39 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
- <head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>JavaScript for in Loop</title>
- </head>
- <body>
-   <script>
+  </head>
+  <body>
+    <script>
       document.write("<h2>JavaScript For In Loop</h2>");
-      document.write("For in loop object ya string ke keys/index par loop chalata hai.<br><br>");
+      document.write(
+        "For in loop object ya string ke keys/index par loop chalata hai.<br><br>",
+      );
 
       let string = "Welcome";
-      for(let index in string)
-      {
+      for (let index in string) {
         document.write(`property : ${index} and value : ${string[index]} <br>`);
       }
 
       /* defining JavaScript Object */
       let object = {
-              name:'Rahul Rajput', 
-              age:54,
-              designation : 'Web Developer',
-       };
+        name: "Rahul Rajput",
+        age: 54,
+        designation: "Web Developer",
+      };
       document.write(`Before Change : <br>`);
-      for(let property in object)
-      {
-        document.write(`property : ${property} and value : ${object[property]} <br>`);
+      for (let property in object) {
+        document.write(
+          `property : ${property} and value : ${object[property]} <br>`,
+        );
       }
       document.write(`After Change : <br>`);
-      for(let property in object)
-      {
-        if(property == 'age')
-         object[property] = 30;
-         
-        document.write(`property : ${property} and value : ${object[property]} <br>`);
+      for (let property in object) {
+        if (property == "age") object[property] = 30;
+
+        document.write(
+          `property : ${property} and value : ${object[property]} <br>`,
+        );
       }
     </script>
- </body>
+  </body>
 </html>

@@ -1,39 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS</title>
     <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-        }
-        .btn-click{
-            background-color: purple;
-            padding: 10px;
-            margin: 10px;
-            color: white;
-        }
-        .btn-click:hover{
-            background-color: rgb(84, 10, 84);
-        }
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .btn-click {
+        background-color: purple;
+        padding: 10px;
+        margin: 10px;
+        color: white;
+      }
+      .btn-click:hover {
+        background-color: rgb(84, 10, 84);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>javaScript variable</h1>
-    <p>Variable ka use data store karne ke liye hota hai, jaise name, age, city.</p>
+    <p>
+      Variable ka use data store karne ke liye hota hai, jaise name, age, city.
+    </p>
     <button class="btn-click" onclick="showInfo()">Click me!</button>
 
     <script>
-        // This function stores values in variables and shows them in an alert box.
-        function showInfo(){
-            let name = "Karan";
-            let age = 25;
-            let city = "Pune"
+      // This function stores values in variables and shows them in an alert box.
+      function showInfo() {
+        let name = "Karan";
+        let age = 25;
+        let city = "Pune";
 
-            alert("Name: " + name + "\nAge: " + age + "\ncity: " + city)
-        }
+        alert("Name: " + name + "\nAge: " + age + "\ncity: " + city);
+      }
     </script>
-</body>
+  </body>
 </html>

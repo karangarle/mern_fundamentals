@@ -1,43 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Constructor and Class</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        document.write("<h2>Constructor Function and Class</h2>");
-        document.write("Constructor aur class ka use same type ke multiple objects banane ke liye hota hai.<br><br>");
+      document.write("<h2>Constructor Function and Class</h2>");
+      document.write(
+        "Constructor aur class ka use same type ke multiple objects banane ke liye hota hai.<br><br>",
+      );
 
-        function Student(name, age) {
-            this.name = name;
-            this.age = age;
+      function Student(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      Student.prototype.showInfo = function () {
+        return `${this.name} is ${this.age} years old`;
+      };
+
+      class Course {
+        constructor(title, duration) {
+          this.title = title;
+          this.duration = duration;
         }
 
-        Student.prototype.showInfo = function () {
-            return `${this.name} is ${this.age} years old`;
-        };
-
-        class Course {
-            constructor(title, duration) {
-                this.title = title;
-                this.duration = duration;
-            }
-
-            showCourse() {
-                return `${this.title} duration is ${this.duration}`;
-            }
+        showCourse() {
+          return `${this.title} duration is ${this.duration}`;
         }
+      }
 
-        let student1 = new Student("Rahul", 22);
-        let course1 = new Course("JavaScript", "2 months");
+      let student1 = new Student("Rahul", 22);
+      let course1 = new Course("JavaScript", "2 months");
 
-        document.write(`${student1.showInfo()} <br>`);
-        document.write(`${course1.showCourse()} <br>`);
+      document.write(`${student1.showInfo()} <br>`);
+      document.write(`${course1.showCourse()} <br>`);
     </script>
-</body>
-
+  </body>
 </html>

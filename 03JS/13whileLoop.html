@@ -1,25 +1,27 @@
-<!DOCTYPE html><html> <head>
+<!doctype html>
+<html>
+  <head>
     <title>JavaScript Nested While Loop</title>
- </head>
- <body>
-   <script>
-     document.write("<h2>JavaScript While Loop</h2>");
-     document.write("While loop pehle condition check karta hai, phir code run karta hai.<br><br>");
+  </head>
+  <body>
+    <script>
+      document.write("<h2>JavaScript While Loop</h2>");
+      document.write(
+        "While loop pehle condition check karta hai, phir code run karta hai.<br><br>",
+      );
 
-     let x  = 1;
-     while(x <= 10)
-     {
-       let y = 1;
-       document.write(y+" ");
-       while(y < x)
-       {
-         y++;
-         document.write(y+" ");
-       }
+      let x = 1;
+      while (x <= 10) {
+        let y = 1;
+        document.write(y + " ");
+        while (y < x) {
+          y++;
+          document.write(y + " ");
+        }
 
-       ++x;
-       document.write("<br>");
-     } 
+        ++x;
+        document.write("<br>");
+      }
     </script>
- </body>
+  </body>
 </html>
