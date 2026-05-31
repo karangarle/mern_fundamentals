@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Modules</title>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>JavaScript Modules</h2>");
+        document.write("Modules code ko multiple files me split karne ke liye use hote hain. export se value bahar bhejte hain aur import se use karte hain.<br><br>");
+
+        document.write("<b>math.js</b><br>");
+        document.write("<pre>export function add(a, b) {\n  return a + b;\n}</pre>");
+
+        document.write("<b>app.js</b><br>");
+        document.write("<pre>import { add } from './math.js';\nconsole.log(add(10, 20));</pre>");
+
+        document.write("Note: Modules browser me file open se kabhi-kabhi block ho sakte hain. Usually local server ke sath run karte hain.<br>");
+    </script>
+</body>
+
+</html>

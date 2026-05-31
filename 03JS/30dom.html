@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript DOM Manipulation</title>
 
     <style>
         button {
@@ -27,6 +27,7 @@
 </head>
 <body>
     <h1>DOM Manipulation!</h1>
+    <p>DOM ka use HTML elements ko JavaScript se select, change, hide, show ya style karne ke liye hota hai.</p>
 
     <div id="myBox">I am a box!</div>
 
@@ -37,6 +38,7 @@
     <button onclick="changeElement()">Change Element</button>
 
     <script>
+        // getElementById selects an HTML element using its id.
         function changeText() {
             document.getElementById("myBox").innerText = "Text Changed"
         }

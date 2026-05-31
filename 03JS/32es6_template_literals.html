@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ES6 Template Literals</title>
 
     <style>
         * {
@@ -54,6 +54,7 @@
 </head>
 <body class="main-container">
     <h1>ES6 Template Literals</h1>
+    <p>Template literals backtick (`) ke andar likhe jate hain aur ${} se variable directly add kar sakte hain.</p>
 
     <div class="data">
         <input type="text" name="userName" id="userName" placeholder="Enter Your name">
@@ -63,6 +64,7 @@
     </div>
 
     <script>
+        // Template literals make string writing easier than old string concatenation.
         function showMessage(){
             let name = document.getElementById("userName").value;
             let salary = Number(document.getElementById("salary").value);

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <title>JavaScript for of Loop</title>
+ </head>
+ <body>
+   <script>
+      document.write("<h2>JavaScript For Of Loop</h2>");
+      document.write("For of loop iterable values par loop chalata hai, jaise string ke letters ya array ke values.<br><br>");
+
+      /* defining JavaScript String Object */
+      let object = new String("Welcome");
+      console.log(typeof object);
+      for(val of object)
+      {  
+        document.write(`value : ${val}<br>`);
+      }
+
+      /* defining JavaScript Array */
+      let array_var = [12,34,56,'strin', true];
+      for(val of array_var)
+      {  
+        document.write(`value : ${val}<br>`);
+      }
+    </script>
+ </body>
+</html>

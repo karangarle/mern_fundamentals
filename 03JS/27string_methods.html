@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Methods</title>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>JavaScript String Methods</h2>");
+        document.write("String methods text ko read, search, replace ya modify karne ke liye use hote hain.<br><br>");
+
+        let message = "  Welcome to JavaScript Fundamentals  ";
+
+        document.write(`Original String : "${message}" <br>`);
+        document.write(`Length : ${message.length} <br>`);
+        document.write(`Uppercase : ${message.toUpperCase()} <br>`);
+        document.write(`Lowercase : ${message.toLowerCase()} <br>`);
+        document.write(`Trim : "${message.trim()}" <br>`);
+        document.write(`Includes JavaScript : ${message.includes("JavaScript")} <br>`);
+        document.write(`Index Of to : ${message.indexOf("to")} <br>`);
+        document.write(`Slice : ${message.slice(2, 9)} <br>`);
+        document.write(`Replace : ${message.replace("JavaScript", "JS")} <br>`);
+        document.write(`Split : ${message.trim().split(" ")} <br>`);
+    </script>
+</body>
+
+</html>

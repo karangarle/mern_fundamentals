@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Callback Functions</title>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>JavaScript Callback Functions</h2>");
+        document.write("Callback function wo function hota hai jo dusre function ke andar argument ke form me pass hota hai.<br><br>");
+
+        function calculate(num1, num2, callback) {
+            return callback(num1, num2);
+        }
+
+        function add(a, b) {
+            return a + b;
+        }
+
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        document.write(`Addition : ${calculate(10, 5, add)} <br>`);
+        document.write(`Multiplication : ${calculate(10, 5, multiply)} <br>`);
+
+        let numbers = [1, 2, 3, 4, 5];
+        let doubleNumbers = numbers.map(function (value) {
+            return value * 2;
+        });
+
+        document.write(`Map callback example : ${doubleNumbers} <br>`);
+    </script>
+</body>
+
+</html>

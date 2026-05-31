@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Map and Set</title>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>JavaScript Map and Set</h2>");
+        document.write("Map key-value data store karta hai. Set unique values store karta hai.<br><br>");
+
+        let studentMap = new Map();
+        studentMap.set("name", "Karan");
+        studentMap.set("course", "MERN");
+        studentMap.set("age", 24);
+
+        document.write("<b>Map values:</b><br>");
+        for (let [key, value] of studentMap) {
+            document.write(`${key}: ${value} <br>`);
+        }
+
+        let numbers = new Set([10, 20, 20, 30, 30, 40]);
+        document.write("<br><b>Set unique values:</b><br>");
+        for (let value of numbers) {
+            document.write(`${value} <br>`);
+        }
+    </script>
+</body>
+
+</html>

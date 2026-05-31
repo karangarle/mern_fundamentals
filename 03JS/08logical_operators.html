@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Logical Operators</title>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>JavaScript Logical Operators</h2>");
+        document.write("Logical operators multiple conditions ko combine karne ke liye use hote hain.<br><br>");
+
+        let age = 22;
+        let hasVoterId = true;
+        let isStudent = false;
+
+        document.write(`Age : ${age} <br>`);
+        document.write(`Has Voter Id : ${hasVoterId} <br>`);
+        document.write(`Is Student : ${isStudent} <br><br>`);
+
+        document.write(`age >= 18 && hasVoterId : ${age >= 18 && hasVoterId} <br>`); // AND: dono true hone chahiye
+        document.write(`age < 18 || hasVoterId : ${age < 18 || hasVoterId} <br>`); // OR: koi ek true ho to true
+        document.write(`!isStudent : ${!isStudent} <br>`); // NOT: true ko false aur false ko true karta hai
+    </script>
+</body>
+
+</html>

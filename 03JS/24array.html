@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Array In Hindi </title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      document.write("<h2>JavaScript Array</h2>");
+      document.write("Array ek variable me multiple values store karne ke liye use hota hai.<br><br>");
+
+      let array_var = [12, 34.5 , true , false , "string value"];
+      document.write(array_var);
+
+
+      let index;
+
+      document.write(`Traversing using for loop <br>`);
+      for(index = 0; index < array_var.length; index++){
+        document.write(`index number :${index} : ${array_var[index]} <br>`);
+      }
+
+      document.write(`<br>Traversing using for in loop <br>`);
+      for(index in array_var){
+        document.write(`index number :${index} : ${array_var[index]} <br>`);
+      }
+
+      document.write(`<br>Traversing using for of loop <br>`);
+      for(value of array_var){
+        document.write(`${value} <br>`);
+      }
+
+      document.write(`<br>Traversing using while loop <br>`);
+      index = 0;
+      while(index < array_var.length){
+        document.write(`index number :${index} : ${array_var[index]} <br>`);
+        index++;
+      }
+      
+
+      let array_var1 = [];
+      array_var1[0] = "first value";
+      array_var1[1] = "other value";
+
+      /* now skip the array index via associating with new index */
+      array_var1[20] = "Another value";
+      document.write(`<br> Array Values : ${array_var1} <br>`);
+      document.write(`Array length : ${array_var1.length} <br>`);
+
+       /* no manually manupulate the length */
+       array_var1.length = 90;
+       document.write(`New array length : ${array_var1.length}`);
+    </script>
+  </body>
+</html>

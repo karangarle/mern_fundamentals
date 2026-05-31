@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Exception Handling Using try catch finally In Hindi </title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      document.write("<h2>JavaScript Try Catch Finally</h2>");
+      document.write("Try catch ka use error handle karne ke liye hota hai, taki program suddenly stop na ho.<br><br>");
+
+      try
+      {
+        document.write(blah); /* here I have print undefined variable */
+      } 
+      catch(ErrorObj)
+      {
+        document.write(`Error Name : ${ErrorObj.name} <br>`);  /* print Error name */
+        document.write(`Error Message : ${ErrorObj.message} <br>`); /* print Error message */
+      }
+      finally
+      {
+        document.write(`it will run always`);
+      }
+    </script>
+  </body>
+</html>

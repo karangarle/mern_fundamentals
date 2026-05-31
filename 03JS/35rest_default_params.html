@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameters and Default Parameters</title>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>Rest Parameters and Default Parameters</h2>");
+        document.write("Default parameter missing value ke liye default value set karta hai. Rest parameter multiple values ko array me collect karta hai.<br><br>");
+
+        function greet(name = "Guest") {
+            return `Hello ${name}`;
+        }
+
+        function totalMarks(studentName, ...marks) {
+            let total = marks.reduce((sum, mark) => sum + mark, 0);
+            return `${studentName} total marks: ${total}`;
+        }
+
+        document.write(`${greet()} <br>`);
+        document.write(`${greet("Karan")} <br><br>`);
+        document.write(`${totalMarks("Rahul", 80, 70, 90)} <br>`);
+        document.write(`${totalMarks("Pooja", 60, 75, 88, 92)} <br>`);
+    </script>
+</body>
+
+</html>

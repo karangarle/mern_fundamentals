@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Loop</title>
+</head>
+
+<body>
+    <h1>JavaScript Event Loop</h1>
+    <p>Event loop synchronous code, microtask queue aur callback queue ko manage karta hai.</p>
+    <button onclick="runExample()">Run Event Loop Example</button>
+    <ol id="output"></ol>
+
+    <script>
+        function printStep(text) {
+            let li = document.createElement("li");
+            li.innerText = text;
+            document.getElementById("output").appendChild(li);
+        }
+
+        function runExample() {
+            document.getElementById("output").innerHTML = "";
+
+            printStep("1. Synchronous code starts");
+
+            setTimeout(function () {
+                printStep("4. setTimeout callback runs after sync and promise");
+            }, 0);
+
+            Promise.resolve().then(function () {
+                printStep("3. Promise microtask runs before setTimeout");
+            });
+
+            printStep("2. Synchronous code ends");
+        }
+    </script>
+</body>
+
+</html>

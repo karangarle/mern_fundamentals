@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Promise</title>
+</head>
+
+<body>
+    <h1>JavaScript Promise</h1>
+    <p>Promise future result represent karta hai: pending, fulfilled, ya rejected.</p>
+    <button onclick="loadData()">Load Data</button>
+    <p id="output"></p>
+
+    <script>
+        function getUserData() {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    let success = true;
+
+                    if (success) {
+                        resolve("User data loaded successfully");
+                    } else {
+                        reject("Something went wrong");
+                    }
+                }, 1500);
+            });
+        }
+
+        function loadData() {
+            document.getElementById("output").innerText = "Loading...";
+
+            getUserData()
+                .then(function (message) {
+                    document.getElementById("output").innerText = message;
+                })
+                .catch(function (error) {
+                    document.getElementById("output").innerText = error;
+                });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Prototype</title>
+</head>
+
+<body>
+    <script>
+        document.write("<h2>JavaScript Prototype</h2>");
+        document.write("Prototype JavaScript ka inheritance system hai. Objects methods ko prototype se share kar sakte hain.<br><br>");
+
+        function User(name) {
+            this.name = name;
+        }
+
+        User.prototype.sayHello = function () {
+            return `Hello ${this.name}`;
+        };
+
+        let user1 = new User("Karan");
+        let user2 = new User("Amit");
+
+        document.write(`${user1.sayHello()} <br>`);
+        document.write(`${user2.sayHello()} <br><br>`);
+        document.write("Interview point: class syntax internally prototype based inheritance hi use karta hai.<br>");
+    </script>
+</body>
+
+</html>

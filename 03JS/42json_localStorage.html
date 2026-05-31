@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON and localStorage</title>
+</head>
+
+<body>
+    <h1>JSON and localStorage</h1>
+    <p>JSON data exchange format hai. localStorage browser me data save karta hai.</p>
+    <button onclick="saveData()">Save Data</button>
+    <button onclick="showData()">Show Data</button>
+    <p id="output"></p>
+
+    <script>
+        let student = {
+            name: "Karan",
+            course: "JavaScript",
+            city: "Ahmedabad"
+        };
+
+        function saveData() {
+            let jsonData = JSON.stringify(student);
+            localStorage.setItem("student", jsonData);
+            document.getElementById("output").innerText = "Data saved in localStorage";
+        }
+
+        function showData() {
+            let savedData = localStorage.getItem("student");
+            let studentObject = JSON.parse(savedData);
+            document.getElementById("output").innerText = `${studentObject.name} is learning ${studentObject.course}`;
+        }
+    </script>
+</body>
+
+</html>

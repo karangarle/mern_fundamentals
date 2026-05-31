@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Closure</title>
+</head>
+
+<body>
+    <h1>JavaScript Closure</h1>
+    <p>Closure tab banta hai jab inner function outer function ke variable ko remember karta hai.</p>
+    <button onclick="increment()">Increment Counter</button>
+    <p id="output">Counter: 0</p>
+
+    <script>
+        function createCounter() {
+            let count = 0;
+
+            return function () {
+                count++;
+                return count;
+            };
+        }
+
+        let counter = createCounter();
+
+        function increment() {
+            document.getElementById("output").innerText = `Counter: ${counter()}`;
+        }
+    </script>
+</body>
+
+</html>
